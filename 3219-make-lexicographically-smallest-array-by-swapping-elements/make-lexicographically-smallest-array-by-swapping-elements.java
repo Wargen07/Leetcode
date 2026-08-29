@@ -3,7 +3,6 @@ class Solution {
 
         int n = nums.length;
 
-        // Store {value, original index}
         int[][] arr = new int[n][2];
 
         for (int i = 0; i < n; i++) {
