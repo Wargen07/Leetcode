@@ -1,7 +1,7 @@
 class Solution {
     public boolean checkValidString(String s) {
-        int low = 0;  // Minimum open brackets possible
-        int high = 0; // Maximum open brackets possible
+        int low = 0;  
+        int high = 0; 
         
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -12,13 +12,13 @@ class Solution {
             } else if (c == ')') {
                 if (low > 0) low--;
                 high--;
-            } else { // c == '*'
-                if (low > 0) low--; // treat '*' as ')'
-                high++;             // treat '*' as '('
+            } else { 
+                if (low > 0) low--; 
+                high++;             
             }
             
             if (high < 0) {
-                return false; // Too many ')'
+                return false; 
             }
         }
         
